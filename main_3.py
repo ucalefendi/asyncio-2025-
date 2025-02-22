@@ -12,16 +12,16 @@ async def fetch_data(id,delay):
 
 async def main():
 
-    task1 = await asyncio.create_task(fetch_data(1,2))
-    task2 = await asyncio.create_task(fetch_data(3,4))
-    task3 = await asyncio.create_task(fetch_data(5,6))
+    task1 =  asyncio.create_task(fetch_data(1,2))
+    task2 =  asyncio.create_task(fetch_data(3,4))
+    task3 =  asyncio.create_task(fetch_data(5,6))
 
 
     result1 = await task1
     result2 = await task2
     result3 = await task3
 
-    print(result1,result2,result3)
+    print("---->>>",result1,"---->>>",result2,"---->>>",result3)
 
 
 asyncio.run(main())    
